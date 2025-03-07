@@ -54,6 +54,20 @@ botao_clique_aqui = driver.find_element(By.ID,'desafio2')
 sleep(1)
 #clicar no botão
 botao_clique_aqui.click()
+sleep(1)
+#rolar pagina
+driver.execute_script("window.scrollTo(0, 350);")
+sleep(2)
+#clicar e digitar no campo
+campo_digite_nome2 = driver.find_element(By.ID,'escondido')
+sleep(1)
+#digitar no campo
+campo_digite_nome2.send_keys('Thiago')
+sleep(1)
+#clicar no botao validar
+botao_validar = driver.find_element(By.ID,'validarDesafio2')
+sleep(1)
+botao_validar.click()
 
 input('')
 driver.close()
